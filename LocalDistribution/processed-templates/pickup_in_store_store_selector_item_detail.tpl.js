@@ -1,0 +1,12 @@
+define('pickup_in_store_store_selector_item_detail.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, lambda=this.lambda;
+  return " <div class=\"pickup-in-store-store-selector-item-detail-list-divider\"></div><div class=\"pickup-in-store-store-selector-item-detail\" data-item-type=\""
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"itemType") || (depth0 != null ? compilerNameLookup(depth0,"itemType") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"itemType","hash":{},"data":data}) : helper)))
+    + "\"><div class=\"pickup-in-store-store-selector-item-detail-item-image\" name=\"item-image\"><img src=\""
+    + escapeExpression(((compilerNameLookup(helpers,"resizeImage") || (depth0 && compilerNameLookup(depth0,"resizeImage")) || helperMissing).call(depth0, ((stack1 = (depth0 != null ? compilerNameLookup(depth0,"thumbnail") : depth0)) != null ? compilerNameLookup(stack1,"url") : stack1), "thumbnail", {"name":"resizeImage","hash":{},"data":data})))
+    + "\" alt=\""
+    + escapeExpression(lambda(((stack1 = (depth0 != null ? compilerNameLookup(depth0,"thumbnail") : depth0)) != null ? compilerNameLookup(stack1,"altimagetext") : stack1), depth0))
+    + "\"></div><div class=\"pickup-in-store-store-selector-item-detail-details\" name=\"item-details\"><p class=\"pickup-in-store-store-selector-item-detail-product-name\"><span class=\"pickup-in-store-store-selector-item-detail-product-title\"> "
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"itemName") || (depth0 != null ? compilerNameLookup(depth0,"itemName") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"itemName","hash":{},"data":data}) : helper)))
+    + " </span></p><div data-view=\"Item.Price\"></div><div data-view=\"Item.Sku\"></div></div></div>  ";
+},"useData":true}); template.Name = 'pickup_in_store_store_selector_item_detail'; return template;});
