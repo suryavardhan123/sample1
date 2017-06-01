@@ -146,13 +146,12 @@ define(
 	,	getContext: function ()
 		{
 			var fullName= this.model.get('fullname');
-			
-			console.log("fullname",fullName);
+			if(fullName){
 			var fName = fullName.split(" ")[0];
 			console.log("fName",fName);
 			var lName = fullName.split(" ")[1];
 			console.log("lName",lName);
-			
+			}
 			
 			//@class Address.Edit.View.Context
 			return {
