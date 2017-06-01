@@ -46,7 +46,7 @@ define(
 			this.model.off('sync');
 			return this._destroy();
 		}
-
+		
 		//@method getContext @return Address.View.Context
 	,	getContext: function ()
 		{
@@ -82,7 +82,7 @@ define(
 				//@property {String} company
 			,	company: company
 				//@property {String} fullname
-			,	fullname: fullname
+			,	fullName: fullname
 				//@property {Boolean} showFullNameOnly
 			,	showFullNameOnly: !!(label ? !company : company)
 				//@property {String} addressLine1
@@ -127,6 +127,7 @@ define(
 			,	invalidAttributes: invalidAttributes
 				//@property {Boolean} isInvalidAddressToRemove
 			,	isInvalidAddressToRemove: !!(this.options.disableRemoveButton && this.options.disableRemoveButton(this.model.get('internalid')))
+			
 			};
 		}
 	});

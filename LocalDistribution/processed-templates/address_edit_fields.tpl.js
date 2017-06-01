@@ -88,7 +88,7 @@ define('address_edit_fields.tpl', ['Handlebars','Handlebars.CompilerNameLookup']
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var stack1, helper, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function", buffer = " <div class=\"address-edit-fields\"><div data-type=\"alert-placeholder\"></div><small class=\"address-edit-fields\">"
     + escapeExpression(((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helperMissing).call(depth0, "Required", {"name":"translate","hash":{},"data":data})))
-    + " <span class=\"address-edit-fields-required\">*</span></small><div class=\"address-edit-fields-group\" data-input=\"fullname\" data-validation=\"control-group\"><label class=\"address-edit-fields-group-label\" for=\""
+    + " <span class=\"address-edit-fields-required\">*</span></small><div class=\"address-edit-fields-group\" data-input=\"fullname\" data-validation=\"control-group\" style=\"display:none;\"><label class=\"address-edit-fields-group-label\" for=\""
     + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"manage") || (depth0 != null ? compilerNameLookup(depth0,"manage") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"manage","hash":{},"data":data}) : helper)))
     + "fullname\"> "
     + escapeExpression(((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helperMissing).call(depth0, "Full Name", {"name":"translate","hash":{},"data":data})))
@@ -96,6 +96,22 @@ define('address_edit_fields.tpl', ['Handlebars','Handlebars.CompilerNameLookup']
     + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"manage") || (depth0 != null ? compilerNameLookup(depth0,"manage") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"manage","hash":{},"data":data}) : helper)))
     + "fullname\" name=\"fullname\" value=\""
     + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"fullName") || (depth0 != null ? compilerNameLookup(depth0,"fullName") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"fullName","hash":{},"data":data}) : helper)))
+    + "\"></div></div><div class=\"address-edit-fields-group\" data-input=\"firstname\" data-validation=\"control-group\"><label class=\"address-edit-fields-group-label\" for=\""
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"manage") || (depth0 != null ? compilerNameLookup(depth0,"manage") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"manage","hash":{},"data":data}) : helper)))
+    + "firstname\"> "
+    + escapeExpression(((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helperMissing).call(depth0, "First Name", {"name":"translate","hash":{},"data":data})))
+    + " <span class=\"address-edit-fields-group-label-required\">*</span></label><div  class=\"address-edit-fields-group-form-controls\" data-validation=\"control\"><input type=\"text\" class=\"address-edit-fields-group-input\" id=\""
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"manage") || (depth0 != null ? compilerNameLookup(depth0,"manage") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"manage","hash":{},"data":data}) : helper)))
+    + "firstname\" name=\"firstname\" value=\""
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"fName") || (depth0 != null ? compilerNameLookup(depth0,"fName") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"fName","hash":{},"data":data}) : helper)))
+    + "\"></div></div><div class=\"address-edit-fields-group\" data-input=\"lastname\" data-validation=\"control-group\"><label class=\"address-edit-fields-group-label\" for=\""
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"manage") || (depth0 != null ? compilerNameLookup(depth0,"manage") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"manage","hash":{},"data":data}) : helper)))
+    + "lastname\"> "
+    + escapeExpression(((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helperMissing).call(depth0, "Last Name", {"name":"translate","hash":{},"data":data})))
+    + " <span class=\"address-edit-fields-group-label-required\">*</span></label><div  class=\"address-edit-fields-group-form-controls\" data-validation=\"control\"><input type=\"text\" class=\"address-edit-fields-group-input\" id=\""
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"manage") || (depth0 != null ? compilerNameLookup(depth0,"manage") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"manage","hash":{},"data":data}) : helper)))
+    + "lastname\" name=\"lastname\" value=\""
+    + escapeExpression(((helper = (helper = compilerNameLookup(helpers,"lName") || (depth0 != null ? compilerNameLookup(depth0,"lName") : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"lName","hash":{},"data":data}) : helper)))
     + "\"></div></div> ";
   stack1 = compilerNameLookup(helpers,"if").call(depth0, (depth0 != null ? compilerNameLookup(depth0,"showCompanyField") : depth0), {"name":"if","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }

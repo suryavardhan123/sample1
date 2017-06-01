@@ -45,6 +45,8 @@ define(
 		,	'change [data-action="selectstate"]': 'eraseZip'
 		,	'change [data-action="inputstate"]': 'eraseZip'
 		,	'blur [data-action="inputphone"]': 'formatPhone'
+		,	'change [data-action="inputphone"]': 'changePhone'
+		
 		}
 
 		//@method initialize Defines this view as composite
@@ -53,6 +55,8 @@ define(
 		{
 			BackboneCompositeView.add(this);
 			this.calculateState();
+			
+			
 		}
 
 		//@method calculateState Pre-calculate many state variables used in the get context. In this way this is state is calculated once
@@ -129,10 +133,27 @@ define(
 				});
 			}
 		}
+	,	'changePhone': function ()
+		{
+			//alert("entered");
+			var firstName=document.getElementById("firstname").value;
+			var lastName=document.getElementById("lastname").value;
+			document.getElementById("fullname").value=(firstName+' '+lastName);
+			//alert(firstName+' '+lastName);
+		}
 
 		//@method getContext @return Address.Edit.View.Context
 	,	getContext: function ()
 		{
+			var fullName= this.model.get('fullname');
+			
+			console.log("fullname",fullName);
+			var fName = fullName.split(" ")[0];
+			console.log("fName",fName);
+			var lName = fullName.split(" ")[1];
+			console.log("lName",lName);
+			
+			
 			//@class Address.Edit.View.Context
 			return {
 				//@property {String} manage
@@ -171,6 +192,9 @@ define(
 			,	isAddressDefaultShipping: this.model.get('defaultshipping') === 'T'
 				//@property {Boolean} showAddressFormSecondAddress
 			,	showAddressFormSecondAddress: Configuration.get('forms.address.showAddressLine2')
+			,	fName:fName
+			,	lName:lName
+			
 			};
 		}
 	});

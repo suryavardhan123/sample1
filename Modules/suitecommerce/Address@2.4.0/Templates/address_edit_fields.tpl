@@ -9,7 +9,7 @@
 	<div data-type="alert-placeholder"></div>
 
 	<small class="address-edit-fields">{{translate 'Required'}} <span class="address-edit-fields-required">*</span></small>
-	<div class="address-edit-fields-group" data-input="fullname" data-validation="control-group">
+	<div class="address-edit-fields-group" data-input="fullname" data-validation="control-group" style="display:none;">
 		<label class="address-edit-fields-group-label" for="{{manage}}fullname">
 			{{translate 'Full Name'}} <span class="address-edit-fields-group-label-required">*</span>
 		</label>
@@ -17,6 +17,23 @@
 			<input type="text" class="address-edit-fields-group-input" id="{{manage}}fullname" name="fullname" value="{{fullName}}">
 		</div>
 	</div>
+	<div class="address-edit-fields-group" data-input="firstname" data-validation="control-group">
+		<label class="address-edit-fields-group-label" for="{{manage}}firstname">
+			{{translate 'First Name'}} <span class="address-edit-fields-group-label-required">*</span>
+		</label>
+		<div  class="address-edit-fields-group-form-controls" data-validation="control">
+			<input type="text" class="address-edit-fields-group-input" id="{{manage}}firstname" name="firstname" value="{{fName}}">
+		</div>
+	</div>
+	<div class="address-edit-fields-group" data-input="lastname" data-validation="control-group">
+		<label class="address-edit-fields-group-label" for="{{manage}}lastname">
+			{{translate 'Last Name'}} <span class="address-edit-fields-group-label-required">*</span>
+		</label>
+		<div  class="address-edit-fields-group-form-controls" data-validation="control">
+			<input type="text" class="address-edit-fields-group-input" id="{{manage}}lastname" name="lastname" value="{{lName}}">
+		</div>
+	</div>
+
 	{{#if showCompanyField}}
 	<div class="address-edit-fields-group" {{#if isCompanyFieldMandatory}} data-input="company" data-validation="control-group" {{/if}}>
 		<label class="address-edit-fields-group-label" for="{{manage}}company">

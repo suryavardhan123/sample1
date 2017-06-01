@@ -29,7 +29,7 @@ define('address_edit.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], funct
   var stack1, buffer = " <div class=\"";
   stack1 = compilerNameLookup(helpers,"if").call(depth0, (depth0 != null ? compilerNameLookup(depth0,"isInModal") : depth0), {"name":"if","hash":{},"fn":this.program(13, data),"inverse":this.program(15, data),"data":data});
   if (stack1 != null) { buffer += stack1; }
-  buffer += "\"><button type=\"submit\" class=\"address-edit-form-button-submit\"> ";
+  buffer += "\"><button type=\"submit\" class=\"address-edit-form-button-submit\" data-action=\"save-address\"> ";
   stack1 = compilerNameLookup(helpers,"if").call(depth0, (depth0 != null ? compilerNameLookup(depth0,"isAddressNew") : depth0), {"name":"if","hash":{},"fn":this.program(17, data),"inverse":this.program(4, data),"data":data});
   if (stack1 != null) { buffer += stack1; }
   buffer += " </button> ";

@@ -91,6 +91,7 @@ define('OrderWizard.Module.Address'
 		//@return {Void}
 	,	editAddress: function (e)
 		{
+			
 			var address_id_str = this.$(e.target).data('id')
 			,	address_id = parseInt(address_id_str, 10);
 
@@ -122,7 +123,7 @@ define('OrderWizard.Module.Address'
 						//After saving the temp address, we set it as the one selected
 						this.setAddress(model.id);
 					};
-
+			
 				view.model.once('change', add_new_address_on_profile, this);
 
 				//If the address being edited is the selected one we must re-set once it is created

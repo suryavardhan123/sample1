@@ -37,6 +37,10 @@ define(
 	,	footerView: FooterSimplifiedView
 		//@property {Function} template
 	,	template: order_wizard_step_tpl
+	
+	,	events: {
+			'click [data-action="submit-step"]':'savebutton'
+		}
 		//@method stepAdvance
 	,	stepAdvance: function ()
 		{
@@ -78,6 +82,15 @@ define(
 
 			// Also trigger the afterRender event so the site search module can load the typeahead.
 			layout.trigger('afterRender');
+		}
+		
+	,	'savebutton': function ()
+		{
+			//alert("entered");
+			//var firstName=document.getElementById("firstname").value;
+			//var lastName=document.getElementById("lastname").value;
+			//document.getElementById("fullname").value=(firstName+' '+lastName);
+			//alert(firstName+' '+lastName);
 		}
 		//@method getContext @returns OrderWizard.Step.Context
 	,	getContext: function ()

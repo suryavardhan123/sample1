@@ -33,7 +33,7 @@
 
 		{{#if showFooter}}
 			<div class="{{#if isInModal}}address-edit-footer{{else}}form-actions{{/if}}">
-				<button type="submit" class="address-edit-form-button-submit">
+				<button type="submit" class="address-edit-form-button-submit" data-action="save-address">
 					{{#if isAddressNew}}
 						{{translate 'Save Address'}}
 					{{else}}

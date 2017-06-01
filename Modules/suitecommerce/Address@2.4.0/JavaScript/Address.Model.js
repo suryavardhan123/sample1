@@ -39,6 +39,8 @@ define('Address.Model'
 		// Backbone.Validation attribute used for validating the form before submit.
 	,	validation: {
 			fullname: { required: true, msg: _('Full Name is required').translate() }
+		,	firstname: {required: true, msg: _('First Name is required').translate()}
+		,	lastname: {required: true, msg: _('Last Name is required').translate()}
 		,	addr1: { required: true, msg: _('Address is required').translate() }
 		,	company: { required: isCompanyRequired(), msg: _('Company is required').translate() }
 		,	country: { required: true, msg: _('Country is required').translate() }

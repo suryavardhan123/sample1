@@ -43,7 +43,8 @@ define(
 	,	attributes: {'class': 'AddressListView'}
 
 	,	events: {
-			'submit form': 'saveForm'
+			'click [data-action="save-address"]':'saveAddress'
+		,	'submit form': 'saveForm'
 		}
 
 	,	bindings: {
@@ -124,13 +125,22 @@ define(
 				,	selectedCountry: this.selectedCountry
 				,	hideDefaults: Configuration.get('currentTouchpoint') !== 'customercenter'
 				,	application: this.options.application
+				
 				});
 			}
 		}
+		
+	,	saveAddress : function(){
+		var firstName=document.getElementById("in-modal-firstname").value;
+			var lastName=document.getElementById("in-modal-lastname").value;
+			document.getElementById("in-modal-fullname").value=(firstName+' '+lastName);
+		
+	}
 
 		//@method getContext @return Address.Edit.View.Context
 	,	getContext: function ()
 		{
+			
 			//@class Address.Edit.View.Context
 			return {
 				//@property {Address.Model} model
@@ -147,6 +157,7 @@ define(
 			,	showFooter: !this.options.hideFooter
 				//@property {Boolean} isInModalOrCollectionNotEmpty
 			,	isInModalOrCollectionNotEmpty: this.inModal || this.collection.length
+			
 			};
 		}
 	});

@@ -12,7 +12,7 @@ define('home.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Han
     + "\" alt=\"\" ><div class=\"home-banner-main-cell-text\">EXAMPLE TEXT</div></div></div> ";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data,depths) {
   var stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, buffer = " <div class=\"home\"><div class=\"home-banner-top\"><p class=\"home-banner-top-message\"> "
-    + escapeExpression(((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helperMissing).call(depth0, "Use promo code <strong>SCADEMO</strong> for <strong>30%</strong> off your purchase", {"name":"translate","hash":{},"data":data})))
+    + escapeExpression(((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || helperMissing).call(depth0, "Use promo code <strong>surya</strong> for <strong>30%</strong> off your purchase", {"name":"translate","hash":{},"data":data})))
     + " </p></div><div class=\"home-slider-container\"><div class=\"home-image-slider\"><ul data-slider class=\"home-image-slider-list\"> ";
   stack1 = compilerNameLookup(helpers,"each").call(depth0, (depth0 != null ? compilerNameLookup(depth0,"carouselImages") : depth0), {"name":"each","hash":{},"fn":this.program(1, data, depths),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
